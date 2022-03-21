@@ -1,7 +1,7 @@
 {
   "name": "CM4 IO Board Active Cooling",
   "image": "testdockermarcods/{arch}-hassoscm4iofan",
-  "version": "0.3",
+  "version": "0.3.1",
   "slug": "cm4_board_temp",
   "description": "Actively keeping your CM4 baord cool.",
   "arch": ["armhf", "armv7", "aarch64"],
