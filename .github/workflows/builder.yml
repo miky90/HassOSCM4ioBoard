@@ -91,7 +91,7 @@ jobs:
         env:
           SHELLCHECK_OPTS: -s bash -e SC2206 -e SC1105 -e SC2046 -e SC2261
 
-  
+
   lint-prettier:
     name: Prettier
     runs-on: ubuntu-latest
@@ -157,19 +157,19 @@ jobs:
       - name: get version
         id: version
         uses: notiz-dev/github-action-json-property@release
-        with: 
-          path: 'argonOne/config.json'
+        with:
+          path: 'cm4iofan/config.json'
           prop_path: 'version'
       - name: Login to DockerHub
-        uses: docker/login-action@v1 
+        uses: docker/login-action@v1
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }} 
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: 🚀 Build
         uses: docker/build-push-action@v2.4.0
         with:
           push: true
-          tags: miky90/${{ matrix.architecture }}-hassosargonone:${{steps.version.outputs.prop}} 
+          tags: miky90/${{ matrix.architecture }}-hassoscm4iofan:${{steps.version.outputs.prop}}
           context: ${{ needs.information.outputs.target }}
           file: ${{ needs.information.outputs.target }}/Dockerfile
           cache-from: |

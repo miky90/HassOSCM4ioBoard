@@ -54,7 +54,7 @@ fanSpeedReport(){
     *)
       icon=mdi:fan;
   esac
-  reqBody='{"state": "'"${fanPercent}"'", "attributes": { "unit_of_measurement": "%", "icon": "'"${icon}"'", "mode": "'"${fanMode}"'", "Temperature '"${CorF}"'": "'"${cpuTemp}"'", "fan level": "'"${fanLevel}"'", "friendly_name": "Argon Fan Speed"}}'
+  reqBody='{"state": "'"${fanPercent}"'", "attributes": { "unit_of_measurement": "%", "icon": "'"${icon}"'", "mode": "'"${fanMode}"'", "Temperature '"${CorF}"'": "'"${cpuTemp}"'", "fan level": "'"${fanLevel}"'", "friendly_name": "Board Fan Speed"}}'
   nc -i 1 hassio 80 1>/dev/null <<< unix2dos<<EOF
 POST /homeassistant/api/states/sensor.cm4_board_addon_fan_speed HTTP/1.1
 Authorization: Bearer ${SUPERVISOR_TOKEN}
@@ -110,13 +110,13 @@ echo "Detecting Layout of i2c, we expect to see \"2f\" here."
 i2cDetect=$(i2cdetect -y -a 10);
 echo -e "${i2cDetect}"
 
-if [[ "$i2cDetect" != *"2f"* ]]; then 
+if [[ "$i2cDetect" != *"2f"* ]]; then
   echo "Fan controller was not detected on i2c. Fan controller will show a 1a on the i2c bus above. This add-on will not control temperature without a connection to Fan controller.";
-else 
+else
   echo "Settings initialized. Fan controller Detected. Beginning monitor.."
 fi;
 
-#Counts the number of repetitions so we can set a 10minute count. 
+#Counts the number of repetitions so we can set a 10minute count.
 thirtySecondsCount=0;
 #the current position, 0=unitialized. 1=off, 2=low, 3=medium, 4=high.
 fanLevel=0;
@@ -138,7 +138,7 @@ until false; do
     cpuTemp=$(( ( cpuTemp *  9/5 ) + 32 ));
     unit="F"
   fi
-  
+
   value=$(mkfloat $cpuTemp) #CPU Temp in floating point format.
   test "${logTemp}" == "true" && echo "Current Temperature $cpuTemp °$unit"
 
@@ -189,7 +189,7 @@ until false; do
     test $? -ne 0 && fanLevel=previousFanLevel
     previousFanLevel=$fanLevel
   fi
-  
+
   sleep 30
   thirtySecondsCount=$((thirtySecondsCount + 1))
   #thirtySecondsCount mod 20 will be 0 once every 20 times, or approx. 10 minutes.
