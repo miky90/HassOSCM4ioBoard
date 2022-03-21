@@ -1,5 +1,5 @@
 {
-  "name": "ArgonOne Active Cooling",
-  "url": "https://github.com/adamoutler/HassOSArgonOne",
-  "maintainer": "Adam Outler <adamoutler@adamoutler.com>"
+  "name": "CM4 IO Board Active Cooling",
+  "url": "https://github.com/miky90/HassOSCM4ioBoard",
+  "maintainer": "Marco Michielotto <marco.michielotto@gmail.com>"
 }
