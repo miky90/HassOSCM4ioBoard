@@ -56,7 +56,7 @@ fanSpeedReport(){
   esac
   reqBody='{"state": "'"${fanPercent}"'", "attributes": { "unit_of_measurement": "%", "icon": "'"${icon}"'", "mode": "'"${fanMode}"'", "Temperature '"${CorF}"'": "'"${cpuTemp}"'", "fan level": "'"${fanLevel}"'", "friendly_name": "Argon Fan Speed"}}'
   nc -i 1 hassio 80 1>/dev/null <<< unix2dos<<EOF
-POST /homeassistant/api/states/sensor.argon_one_addon_fan_speed HTTP/1.1
+POST /homeassistant/api/states/sensor.cm4_board_addon_fan_speed HTTP/1.1
 Authorization: Bearer ${SUPERVISOR_TOKEN}
 Content-Length: $( echo -ne "${reqBody}" | wc -c )
 
@@ -111,9 +111,9 @@ i2cDetect=$(i2cdetect -y -a 1);
 echo -e "${i2cDetect}"
 
 if [[ "$i2cDetect" != *"1a"* ]]; then 
-  echo "Argon One was not detected on i2c. Argon One will show a 1a on the i2c bus above. This add-on will not control temperature without a connection to Argon One.";
+  echo "Fan controller was not detected on i2c. Fan controller will show a 1a on the i2c bus above. This add-on will not control temperature without a connection to Fan controller.";
 else 
-  echo "Settings initialized. Argon One Detected. Beginning monitor.."
+  echo "Settings initialized. Fan controller Detected. Beginning monitor.."
 fi;
 
 #Counts the number of repetitions so we can set a 10minute count. 
