@@ -10,7 +10,7 @@
   "hassio_role": "homeassistant",
   "hassio_api": true,
   "devices": ["/dev/i2c-10"],
-  "url": "https://community.home-assistant.io/t/argon-one-active-cooling-addon/262598/",
+  "url": "https://github.com/miky90/HassOSCM4ioBoard",
   "map": ["config", "ssl", "addons", "backup", "share", "media"],
   "options": {
     "CorF": "C",
