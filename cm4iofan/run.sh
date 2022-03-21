@@ -165,19 +165,19 @@ until false; do
       2)
         if [ "$quiet" != true ]; then
           fanMode="Low";
-          fanPercent=85;
+          fanPercent=80;
         else
           fanMode="Quiet Low";
-          fanPercent=10;
+          fanPercent=20;
         fi
         ;;
       3)
         if [ "$quiet" != true ]; then
           fanMode="Medium";
-          fanPercent=170;
+          fanPercent=160;
         else
           fanMode="Quiet Medium";
-          fanPercent=30;
+          fanPercent=40;
         fi
         ;;
       4)
