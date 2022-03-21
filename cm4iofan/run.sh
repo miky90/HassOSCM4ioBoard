@@ -72,9 +72,9 @@ action() {
   fanMode=${3}
   cpuTemp=${4}
   CorF=${5}
-  fanPercentHex=$(printf '%x' "${fanPercent}")
+  fanPercentHex=$(printf '0x%x' "${fanPercent}")
   printf '%(%Y-%m-%d_%H:%M:%S)T'
-  echo ": ${cpuTemp}${CorF} - Level ${fanLevel} - Fan ${fanPercent}% (${fanMode})";
+  echo ": ${cpuTemp}${CorF} - Level ${fanLevel} - Fan ${fanPercent}% (${fanMode}) - ${fanPercentHex}";
   i2cset -y 10 0x2f 0x30 "${fanPercentHex}"
   returnValue=${?}
   test "${createEntity}" == "true" && fanSpeedReport "${fanPercent}" "${fanLevel}" "${fanMode}" "${cpuTemp}" "${CorF}" &
