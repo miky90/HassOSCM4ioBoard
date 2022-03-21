@@ -165,24 +165,24 @@ until false; do
       2)
         if [ "$quiet" != true ]; then
           fanMode="Low";
-          fanPercent=33;
+          fanPercent=85;
         else
           fanMode="Quiet Low";
-          fanPercent=1;
+          fanPercent=10;
         fi
         ;;
       3)
         if [ "$quiet" != true ]; then
           fanMode="Medium";
-          fanPercent=66;
+          fanPercent=170;
         else
           fanMode="Quiet Medium";
-          fanPercent=3;
+          fanPercent=30;
         fi
         ;;
       4)
         fanMode="High";
-        fanPercent=100;
+        fanPercent=255;
         ;;
     esac
     action "${fanPercent}" "${fanLevel}" "${fanMode}" "${cpuTemp}" "${CorF}"
