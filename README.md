@@ -1,5 +1,4 @@
-![image](gitResources/activecooling.jpg)
-
+![image](gitResources/cm4ioboard.jpg)
 This Addon enables and activates automated active cooling.
 
 # Installation
@@ -11,12 +10,10 @@ Within HA
 1. Click the … button (in top left).
 1. Add this Repository URL.
 
-Click ArgonOne Temp Control and install.
+Click CM4 IO Board Active Cooling and install.
 ![image](gitResources/addonSelect.png)
 
 # Configuration
-
-![image](gitResources/Configuration.png)
 
 ## Celsius or Fahrenheit
 

@@ -168,7 +168,7 @@ until false; do
           fanPercent=80;
         else
           fanMode="Quiet Low";
-          fanPercent=20;
+          fanPercent=30;
         fi
         ;;
       3)
@@ -177,7 +177,7 @@ until false; do
           fanPercent=160;
         else
           fanMode="Quiet Medium";
-          fanPercent=40;
+          fanPercent=50;
         fi
         ;;
       4)

@@ -1,6 +1,7 @@
-# Configuration
 
-![image](https://raw.githubusercontent.com/adamoutler/HassOSArgonOneAddon/main/gitResources/Configuration.png)
+![image](https://raw.githubusercontent.com/miky90/HassOSCM4ioBoard/main/gitResources/cm4ioboard.jpg)
+
+# Configuration
 
 ## Celsius or Fahrenheit
 
@@ -10,7 +11,7 @@ Choose Celsius or Fahrenheit.
 
 ## Temperature Ranges
 
-![image](https://raw.githubusercontent.com/adamoutler/HassOSArgonOneAddon/main/gitResources/FanRangeExplaination.png)
+![image](https://raw.githubusercontent.com/miky90/HassOSCM4ioBoard/main/gitResources/FanRangeExplaination.png)
 
 Set your fan ranges appropriately.
 
@@ -32,6 +33,5 @@ In order to enable i2C, you must follow one of the methods below.
 
 ## Support
 
-Need support? Click [here](https://community.home-assistant.io/t/argon-one-active-cooling-addon/262598/8).
+Need support? Click [here](https://github.com/miky90/HassOSCM4ioBoard/issues).
 Try to be detailed about your feedback.
-If you can't be detailed, then please be as obnoxious as you can be.
