@@ -1,4 +1,3 @@
-
 ![image](https://raw.githubusercontent.com/miky90/HassOSCM4ioBoard/main/gitResources/cm4ioboard.jpg)
 
 # Configuration

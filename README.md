@@ -13,6 +13,7 @@ Within HA
 Click CM4 IO Board Active Cooling and install.
 
 ![image](gitResources/addonSelect.jpg)
+
 # Configuration
 
 ## Celsius or Fahrenheit
